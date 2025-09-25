@@ -32,4 +32,12 @@ O n time
 O n space
 
 
-
+## Pattern
+“Use a hash map to check past values quickly while scanning forward.” 
+🔑 General Hashing Pattern (for Two Sum–style problems)
+	•	Goal: Find pairs (or groups) of numbers that satisfy a condition (e.g., add to a target).
+	•	Steps:
+	1.	Use a hash map (dict) to store what you’ve seen (value → index).
+	2.	For each new number, compute what you need (the complement).
+	3.	Check the hash map → if it’s there, you found a solution.
+	4.	Otherwise, record the current number for future checks.
