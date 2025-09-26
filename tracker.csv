@@ -2,7 +2,6 @@ Date,Problem,Category,Difficulty,Pattern,Status,Notes
 2025-09-24,Two Sum,Arrays,Easy,HashMap,attempt,notes/two_sum.md
 2025-09-25,Two Sum,Arrays,Easy,HashMap,Solved,notes/two_sum.md
 2025-09-25,Contains Duplicates,Arrays,Easy,HashMap,attempt,notes/contains_duplicates.md
-2025-09-26,Top k frequent
-elements,Arrays,Medium,HashMap,attempt,notes/top_k_frequent_elements.md
+2025-09-26,Top k frequent elements,Arrays,Medium,HashMap,attempt,notes/top_k_frequent_elements.md
 
 
