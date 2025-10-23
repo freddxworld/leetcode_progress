@@ -1,16 +1,26 @@
-from typing import List
-from collections import Counter
+from typing import DefaultDict, List 
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        #base case
-        if len(nums) == 1:
-            return [nums[0]]
-        mode = {}
+        res = []
+        counter = DefaultDict(int)
         for num in nums:
-            if num in mode:
-                mode[num] += 1
-            else:
-                mode[num] = 1
-        f = Counter(mode)
-        top_k = f.most_common(k)
-        return[num for num, count in top_k] 
+            counter[num] += 1
+        buckets = [[] for _ in range(len(nums) + 1)]
+        for num, freq in counter.items():
+            buckets[freq].append(num)
+        for i in range(len(buckets) - 1, 0 , -1):
+            for num in buckets[i]:
+                res.append(num)
+                if len(res) == k:
+                    return res
+
+
+nums = [7,7]
+k = 1
+
+#Output: [7]
+
+#Output: [2,3]
+res = Solution().topKFrequent(nums, k)
+print(res)
+           
