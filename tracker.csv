@@ -46,3 +46,5 @@ Date,Problem,Category,Difficulty,Pattern,Status
 2025-10-28,sudoku,Arrays,Medium,HashMap,attempt
 2025-10-29,longest_consecutive,Arrays,Medium,HashMap,Solved
 2025-10-29,sudoku,Arrays,Medium,HashMap,Solved
+2025-10-31,Two Sum,Arrays,Easy,HashMap,attempt
+2025-10-31,Group_Anagrams,Arrays,Medium,HashMap,Solved
