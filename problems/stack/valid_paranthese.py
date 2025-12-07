@@ -13,25 +13,21 @@
 #
 def valid_p(s: str):
     stack = []
-    pairs = {')': '(', ']': '[', '}': '{'}
+    dic = {']': '[', '}': '{', ')': '('}
     for char in s:
-        if char in pairs.values():
+        if char in dic.values():
             stack.append(char)
         else:
-            # tells us if stack is empty or if the corresponding value for char
-            # does not match the latest push in stack then return false
-            if not stack or pairs[char] != stack[-1]:
+            if not stack or stack[-1] != dic[char]:
                 return False
-            else:
-                stack.pop()
+            stack.pop()
 
-    # will pass back true if stack is empty
     return len(stack) == 0
 
 
 s = "[]"
 # Output: true
+print(valid_p(s))
 
 s2 = "[(])"
 # Output: false
-print(valid_p(s2))
